@@ -11,37 +11,29 @@ const events = [
         id: 0,
         country: 'France',
         name: 'Event name',
-        description: [
-            'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit. Aliquam netus egestas mattis at tortor aliquam dictumst. Consequat fringilla lacus eget egestas enim. Orci rhoncus amet eget metus amet vel ac ac. Dignissim vitae a tempus nibh bibendum tristique sed nisi. Morbi pulvinar nisl turpis malesuada nec eu.',
-            'Eros lobortis vel phasellus platea vestibulum habitasse commodo faucibus quisque. Senectus est dolor pretium praesent. Enim tempor mauris lectus dignissim varius. Porttitor morbi aliquet ornare pharetra. Neque facilisis sagittis enim morbi ipsum tincidunt nunc natoque. Id parturient lacus eget mi morbi. '
-        ],
+        description: 'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit.',
+        tags: ['Wedding', 'Luxury', 'International']
     },
     {
         id: 1,
         country: 'Spain',
         name: 'Event name',
-        description: [
-            'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit. Aliquam netus egestas mattis at tortor aliquam dictumst. Consequat fringilla lacus eget egestas enim. Orci rhoncus amet eget metus amet vel ac ac. Dignissim vitae a tempus nibh bibendum tristique sed nisi. Morbi pulvinar nisl turpis malesuada nec eu.',
-            'Eros lobortis vel phasellus platea vestibulum habitasse commodo faucibus quisque. Senectus est dolor pretium praesent. Enim tempor mauris lectus dignissim varius. Porttitor morbi aliquet ornare pharetra. Neque facilisis sagittis enim morbi ipsum tincidunt nunc natoque. Id parturient lacus eget mi morbi. '
-        ],
+        description: 'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis.',
+        tags: ['Corporate', 'Conference', 'Team Building']
     },
     {
         id: 2,
         country: 'Italy',
         name: 'Event name',
-        description: [
-            'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit. Aliquam netus egestas mattis at tortor aliquam dictumst. Consequat fringilla lacus eget egestas enim. Orci rhoncus amet eget metus amet vel ac ac. Dignissim vitae a tempus nibh bibendum tristique sed nisi. Morbi pulvinar nisl turpis malesuada nec eu.',
-            'Eros lobortis vel phasellus platea vestibulum habitasse commodo faucibus quisque. Senectus est dolor pretium praesent. Enim tempor mauris lectus dignissim varius. Porttitor morbi aliquet ornare pharetra. Neque facilisis sagittis enim morbi ipsum tincidunt nunc natoque. Id parturient lacus eget mi morbi. '
-        ],
+        description: 'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit. Aliquam netus egestas mattis at tortor aliquam dictumst. Consequat fringilla lacus eget egestas enim. Orci rhoncus amet eget metus amet vel ac ac. Dignissim vitae a tempus nibh bibendum tristique sed nisi. Morbi pulvinar nisl turpis malesuada nec eu.',
+        tags: ['Wedding', 'Luxury', 'International']
     },
     {
         id: 3,
         country: 'Germany',
         name: 'Event name',
-        description: [
-            'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit. Aliquam netus egestas mattis at tortor aliquam dictumst. Consequat fringilla lacus eget egestas enim. Orci rhoncus amet eget metus amet vel ac ac. Dignissim vitae a tempus nibh bibendum tristique sed nisi. Morbi pulvinar nisl turpis malesuada nec eu.',
-            'Eros lobortis vel phasellus platea vestibulum habitasse commodo faucibus quisque. Senectus est dolor pretium praesent. Enim tempor mauris lectus dignissim varius. Porttitor morbi aliquet ornare pharetra. Neque facilisis sagittis enim morbi ipsum tincidunt nunc natoque. Id parturient lacus eget mi morbi. '
-        ],
+        description: 'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit. Aliquam netus egestas mattis at tortor aliquam dictumst. Consequat fringilla lacus eget egestas enim. Orci rhoncus amet eget metus amet vel ac ac. Dignissim vitae a tempus nibh bibendum tristique sed nisi. Morbi pulvinar nisl turpis malesuada nec eu.',
+        tags: ['Corporate', 'Conference', 'Team Building']
     },
 ]
 
@@ -143,12 +135,19 @@ export default function Countries() {
                                     <h4 className='font-playfairDisplay text-xl mt-2 mb-4'>
                                         {event.name}
                                     </h4>
-                                    {event.description.map(d => (
-                                        <div className='text-sm font-light mb-4' key={`${event.id}-${d}`}>
-                                            {d}
-                                        </div>
-                                    ))}
-
+                                    <div className='text-sm font-light mb-4'>
+                                        {event.description}
+                                    </div>
+                                    <div className='flex flex-wrap gap-2 mt-4'>
+                                        {event.tags.map(tag => (
+                                            <span 
+                                                key={`${event.id}-${tag}`}
+                                                className='px-3 py-1 bg-dun/10 text-dun rounded-full text-sm'
+                                            >
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -199,12 +198,19 @@ export default function Countries() {
                         <h3 className='text-3xl sm:text-4xl lg:text-5xl font-playfairDisplay mt-4 text-dun'>
                             {events[activeCountry].country} - {events[activeCountry].name}
                         </h3>
-                        {events[activeCountry].description.map((d) => (
-                            <p className='text-base font-poppins font-light mt-8 mb-8'
-                                key={`${events[activeCountry].id}-${d}`}>
-                                {d}
-                            </p>
-                        ))}
+                        <p className='text-base font-poppins font-light mt-8 mb-8'>
+                            {events[activeCountry].description}
+                        </p>
+                        <div className='flex flex-wrap gap-3 mb-8'>
+                            {events[activeCountry].tags.map(tag => (
+                                <span 
+                                    key={`${events[activeCountry].id}-${tag}`}
+                                    className='px-4 py-2 bg-dun/10 text-dun rounded-full'
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ import contact from '@/images/contact.png'
 import Countries from "@/components/Countries";
 import FAQ from "@/components/FAQ";
 import Button from "@/components/Button";
-
+import Reviews from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -138,6 +138,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Reviews />
       <FAQ />
       <section id="contact" className="px-4 xl:px-0 xl:max-w-[1232px] mx-auto py-[100px] flex flex-col lg:flex-row items-center justify-between gap-[100px]">
         <div className="relative w-full max-w-[500px] aspect-square lg:size-[500px] bg-foreground rounded-tr-[50%] after:absolute after:inset-0 after:border after:border-[#D6B981] after:rounded-tr-[50%] after:scale-[1.05]">
