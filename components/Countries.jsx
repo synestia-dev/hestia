@@ -9,31 +9,31 @@ import world from '@/images/world.svg';
 const events = [
     {
         id: 0,
-        country: 'France',
+        country: 'Spain',
         name: 'Event name',
-        description: 'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit.',
-        tags: ['Wedding', 'Luxury', 'International']
+        description: 'Organized a dynamic medical device conference in Barcelona, bringing together over 100 experts (in-person and online) to discuss biocompatibility and its role in healthcare innovation.',
+        tags: ['Medical Devices']
     },
     {
         id: 1,
-        country: 'Spain',
+        country: 'Czechia',
         name: 'Event name',
-        description: 'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis.',
-        tags: ['Corporate', 'Conference', 'Team Building']
+        description: 'Successfully delivered a conference on respiratory drug delivery for the medical device industry. Hosted a tailored partner gathering for an international litigation finance company, connecting over 60 professionals from across Europe.',
+        tags: ['Medical Devices', 'Legal', 'Finance','Networking']
     },
     {
         id: 2,
-        country: 'Italy',
+        country: 'Germany',
         name: 'Event name',
-        description: 'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit. Aliquam netus egestas mattis at tortor aliquam dictumst. Consequat fringilla lacus eget egestas enim. Orci rhoncus amet eget metus amet vel ac ac. Dignissim vitae a tempus nibh bibendum tristique sed nisi. Morbi pulvinar nisl turpis malesuada nec eu.',
-        tags: ['Wedding', 'Luxury', 'International']
+        description: 'Led an engaging cross-industry digital transformation conference, creating opportunities for meaningful discussions on innovation and future technologies.',
+        tags: ['Digital Transformation', 'Tech', 'Business Growth']
     },
     {
         id: 3,
-        country: 'Germany',
+        country: 'Italy',
         name: 'Event name',
-        description: 'Lorem ipsum dolor sit amet consectetur. Aliquet massa quis diam diam. Pharetra convallis sed neque diam purus sit ornare quis. Nisl odio at sem at sit. Aliquam netus egestas mattis at tortor aliquam dictumst. Consequat fringilla lacus eget egestas enim. Orci rhoncus amet eget metus amet vel ac ac. Dignissim vitae a tempus nibh bibendum tristique sed nisi. Morbi pulvinar nisl turpis malesuada nec eu.',
-        tags: ['Corporate', 'Conference', 'Team Building']
+        description: 'Directed a forward-thinking event focused on innovations in cleaning products, highlighting industry trends and sustainable practices.',
+        tags: ['Cleaning Products', 'Sustainability',]
     },
 ]
 
@@ -101,7 +101,16 @@ export default function Countries() {
                         ${activeCountry === 1 ? 'fill-[#604B3E]' : 'fill-dun'}`}
                     onClick={() => setActiveCountry(1)}
                 />
-                {/* Add other pins... */}
+                <MapPinIcon
+                    className={`size-10 absolute top-[35%] left-[25%] cursor-pointer text-background stroke-1
+                        ${activeCountry === 2? 'fill-[#604B3E]' : 'fill-dun'}`}
+                    onClick={() => setActiveCountry(2)}
+                />
+                <MapPinIcon
+                    className={`size-10 absolute top-[25%] left-[55%] cursor-pointer text-background stroke-1
+                        ${activeCountry === 3? 'fill-[#604B3E]' : 'fill-dun'}`}
+                    onClick={() => setActiveCountry(3)} 
+                />
             </div>
 
             {/* Mobile View - Slider */}

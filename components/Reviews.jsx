@@ -9,37 +9,43 @@ export default function Reviews() {
             text: "Lorem ipsum dolor sit amet consectetur. Lobortis leo molestie mattis a pulvinar cras habitant pulvinar ut. Dui odio cursus tristique vestibulum turpis. Pharetra quam accumsan blandit proin id eget congue.",
             author: "John Doe",
             role: "CEO",
-            stars: 5
+            stars: 5,
+            linkedIn: "https://www.linkedin.com/in/johndoe"
         },
         {
             text: "Lorem ipsum dolor sit amet consectetur. Lobortis leo molestie mattis a pulvinar cras habitant pulvinar ut. Dui odio cursus tristique vestibulum turpis. Pharetra quam accumsan blandit proin id eget congue.",
             author: "Jane Smith",
             role: "Marketing Director",
-            stars: 5
+            stars: 5,
+            linkedIn: "https://www.linkedin.com/in/johndoe"
         },
         {
             text: "Lorem ipsum dolor sit amet consectetur. Lobortis leo molestie mattis a pulvinar cras habitant pulvinar ut. Dui odio cursus tristique vestibulum turpis. Pharetra quam accumsan blandit proin id eget congue.",
             author: "Mike Johnson",
             role: "Project Manager",
-            stars: 5
+            stars: 5,
+            linkedIn: "https://www.linkedin.com/in/johndoe"
         },
         {
             text: "Lorem ipsum dolor sit amet consectetur. Lobortis leo molestie mattis a pulvinar cras habitant pulvinar ut. Dui odio cursus tristique vestibulum turpis. Pharetra quam accumsan blandit proin id eget congue.",
             author: "Sarah Williams",
             role: "Designer",
-            stars: 5
+            stars: 5,
+            linkedIn: "https://www.linkedin.com/in/johndoe"
         },
         {
             text: "Lorem ipsum dolor sit amet consectetur. Lobortis leo molestie mattis a pulvinar cras habitant pulvinar ut. Dui odio cursus tristique vestibulum turpis. Pharetra quam accumsan blandit proin id eget congue.",
             author: "Sarah Williams",
             role: "Designer",
-            stars: 5
+            stars: 5,
+            linkedIn: "https://www.linkedin.com/in/johndoe"
         },
         {
             text: "Lorem ipsum dolor sit amet consectetur. Lobortis leo molestie mattis a pulvinar cras habitant pulvinar ut. Dui odio cursus tristique vestibulum turpis. Pharetra quam accumsan blandit proin id eget congue.",
             author: "Sarah Williams",
             role: "Designer",
-            stars: 5
+            stars: 5,
+            linkedIn: "https://www.linkedin.com/in/johndoe"
         },
     ];
 
@@ -112,13 +118,21 @@ export default function Reviews() {
                                                 ))}
                                             </div>
                                             <p className="font-poppins font-light text-[#131313]/60 mb-4">{review.text}</p>
-                                            <div className='flex items-center gap-4'>
+                                            <div className='flex items-center gap-4 mb-4'>
                                                 <div className='size-14 rounded-full bg-gray-100'></div>
                                                 <div>
                                                     <p className="font-poppins font-semibold text-lg text-[#D6B981] leading-tight">{review.author}</p>
                                                     <p className="font-poppins font-light text-lg text-[#D6B981] leading-tight">{review.role}</p>
                                                 </div>
                                             </div>
+                                            <a
+                                                href={review.linkedIn}
+                                                className="inline-block text-[#D6B981] hover:text-[#c4a974] font-poppins text-sm transition-colors"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                Read more →
+                                            </a>
                                         </div>
                                     ))}
                             </div>

@@ -7,20 +7,28 @@ import faq from '@/images/faq.png'
 
 const questions = [
     {
-        question: "Lorem ipsum dolor sit amet?",
-        answer: "Lorem ipsum dolor sit amet consectetur. Pellentesque magna arcu vel vel magna. Urna mauris urna nibh integer morbi enim vitae tellus. Porttitor sociis sit hendrerit orci sit odio. Ipsum auctor fames porttitor mattis accumsan tempor nibh pharetra nullam."
+        question: "What types of events do you specialize in?",
+        answer: "I focus on organizing B2B conferences, corporate gatherings, networking events, and industry summits."
     },
     {
-        question: "Lorem ipsum dolor sit amet?",
-        answer: "Lorem ipsum dolor sit amet consectetur. Pellentesque magna arcu vel vel magna. Urna mauris urna nibh integer morbi enim vitae tellus. Porttitor sociis sit hendrerit orci sit odio. Ipsum auctor fames porttitor mattis accumsan tempor nibh pharetra nullam."
+        question: "What industries have you worked with?",
+        answer: "I’ve planned events for a range of industries, including tech, finance, pharmaceuticals, and healthcare."
     },
     {
-        question: "Lorem ipsum dolor sit amet?",
-        answer: "Lorem ipsum dolor sit amet consectetur. Pellentesque magna arcu vel vel magna. Urna mauris urna nibh integer morbi enim vitae tellus. Porttitor sociis sit hendrerit orci sit odio. Ipsum auctor fames porttitor mattis accumsan tempor nibh pharetra nullam."
+        question: "What’s the best way to get started?",
+        answer: "The first step is a consultation where we can discuss your vision and needs. From there, I’ll create a tailored plan for your event."
     },
     {
-        question: "Lorem ipsum dolor sit amet?",
-        answer: "Lorem ipsum dolor sit amet consectetur. Pellentesque magna arcu vel vel magna. Urna mauris urna nibh integer morbi enim vitae tellus. Porttitor sociis sit hendrerit orci sit odio. Ipsum auctor fames porttitor mattis accumsan tempor nibh pharetra nullam."
+        question: "How involved will I need to be during the planning process?",
+        answer: "It’s up to you! I’ll handle as much (or as little) as you’d like, keeping you informed every step of the way."
+    },
+    {
+        question: "How far in advance should I book your services?",
+        answer: "It’s best to get started as early as possible—typically 4–6 months for large conferences."
+    },
+    {
+        question: "Do you work with a specific budget range?",
+        answer: "I can work with budgets of all sizes and will help you make the most of your resources."
     },
 ]
 
