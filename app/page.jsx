@@ -12,13 +12,14 @@ import Countries from "@/components/Countries";
 import FAQ from "@/components/FAQ";
 import Button from "@/components/Button";
 import Reviews from "@/components/Reviews";
+import Form from "@/components/Form";
 
 export default function Home() {
   return (
     <main>
       <section className="px-4 xl:px-0 xl:max-w-[1232px] mx-auto pt-14 pb-16 flex flex-col lg:flex-row gap-16 lg:gap-32">
         <div className="relative w-full max-w-[464px] mx-auto aspect-[464/632] lg:w-[464px] lg:h-[632px] rounded-t-full bg-[#F7F2EE] after:absolute after:inset-0 after:border after:border-[#D6B981] after:rounded-t-full after:scale-[1.05]">
-          <Image src={hero} alt="Hero image" className="w-full h-full object-contain object-bottom" />
+          <Image src={hero} alt="Hero image" className="w-full h-full object-cover object-bottom rounded-t-full" />
         </div>
         <div className="flex-1">
           <h1 className="flex justify-center lg:justify-start">
@@ -51,7 +52,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative">
+      <section id="slogan" className="relative">
         <div className="px-4 xl:px-0 xl:max-w-[1232px] mx-auto pt-14 pb-12">
           <div className="flex">
             <h2 className="hidden lg:block text-4xl lg:text-5xl font-playfairDisplay leading-tight relative -rotate-90 whitespace-nowrap origin-center">
@@ -83,15 +84,15 @@ export default function Home() {
               <div className="flex flex-col lg:flex-row gap-6 lg:gap-[170px]">
                 <div className="p-6 lg:p-8 border border-dun rounded-[40px] flex flex-col gap-4 items-center justify-center max-w-[300px] mx-auto w-full hover:bg-dun transition-all duration-300">
                   <h3 className="text-2xl lg:text-[32px] font-playfairDisplay">Step 1</h3>
-                  <p className="text-sm lg:text-base font-poppins font-light text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore amet ore et dolore magna aliqua.</p>
+                  <p className="text-sm lg:text-base font-poppins font-light text-center">Let’s start the conversation! Share your ideas, goals, and initial details about the event you envision.</p>
                 </div>
                 <div className="p-6 lg:p-8 border border-dun rounded-[40px] flex flex-col gap-4 items-center justify-center max-w-[300px] mx-auto w-full hover:bg-dun transition-all duration-300">
                   <h3 className="text-2xl lg:text-[32px] font-playfairDisplay">Step 2</h3>
-                  <p className="text-sm lg:text-base font-poppins font-light text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore amet ore et dolore magna aliqua.</p>
+                  <p className="text-sm lg:text-base font-poppins font-light text-center">We’ll sit down (virtually or in person) to dive deeper into your needs, discuss your vision, and explore how I can help bring your ideas to life.</p>
                 </div>
                 <div className="p-6 lg:p-8 border border-dun rounded-[40px] flex flex-col gap-4 items-center justify-center max-w-[300px] mx-auto w-full hover:bg-dun transition-all duration-300">
                   <h3 className="text-2xl lg:text-[32px] font-playfairDisplay">Step 3</h3>
-                  <p className="text-sm lg:text-base font-poppins font-light text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore amet ore et dolore magna aliqua.</p>
+                  <p className="text-sm lg:text-base font-poppins font-light text-center">I’ll create a customized event strategy and provide a detailed plan that aligns with your goals and aspirations.</p>
                 </div>
               </div>
             </div>
@@ -99,11 +100,11 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-[200px] mt-6 lg:mt-10">
               <div className="p-6 lg:p-8 border border-dun rounded-[40px] flex flex-col gap-4 items-center justify-center max-w-[300px] mx-auto w-full hover:bg-dun transition-all duration-300">
                 <h3 className="text-2xl lg:text-[32px] font-playfairDisplay">Step 4</h3>
-                <p className="text-sm lg:text-base font-poppins font-light text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore amet ore et dolore magna aliqua.</p>
+                <p className="text-sm lg:text-base font-poppins font-light text-center">Together, we’ll review everything step-by-step to ensure each detail is just right and reflects your vision perfectly.</p>
               </div>
               <div className="p-6 lg:p-8 border border-dun rounded-[40px] flex flex-col gap-4 items-center justify-center max-w-[300px] mx-auto w-full hover:bg-dun transition-all duration-300">
                 <h3 className="text-2xl lg:text-[32px] font-playfairDisplay">Step 5</h3>
-                <p className="text-sm lg:text-base font-poppins font-light text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore amet ore et dolore magna aliqua.</p>
+                <p className="text-sm lg:text-base font-poppins font-light text-center">Once everything is finalized, I’ll take care of the execution to make your event a success—and provide post-event insights to help with future projects.</p>
               </div>
             </div>
           </div>
@@ -164,21 +165,7 @@ export default function Home() {
           <p className="text-base font-poppins font-light text-foreground mt-4">
           Do you have questions or are you ready to start planning your next event? Fill out the form below, and I’ll get back to you soon!
           </p>
-          <form className="flex flex-col gap-6 mt-8 lg:mt-10 items-center w-full">
-            <label htmlFor="name" className="w-full">
-              <span className="block font-poppins mb-2 text-base font-semibold">First Name</span>
-              <input id="name" type="text" name="name" className="w-full border border-dun rounded-lg p-3 lg:p-4" />
-            </label>
-            <label htmlFor="email" className="w-full">
-              <span className="block font-poppins mb-2 text-base font-semibold">Email</span>
-              <input id="email" type="email" name="email" className="w-full border border-dun rounded-lg p-4" />
-            </label>
-            <label htmlFor="message" className="w-full">
-              <span className="block font-poppins mb-2 text-base font-semibold">Message</span>
-              <textarea id="message" name="message" rows={6} className="w-full border border-dun rounded-lg p-4 resize-none" />
-            </label>
-            <Button>Submit</Button>
-          </form>
+          <Form />
         </div>
       </section>
     </main>
