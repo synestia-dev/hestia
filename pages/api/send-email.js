@@ -7,12 +7,13 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
+  
   const { name, email, message } = req.body;
-
+  
   try {
     const data = await resend.emails.send({
-      from: "Your Website <onboarding@resend.dev>", // Update this with your verified domain
-      to: ["your-email@example.com"], // Where you want to receive emails
+      from: "noreply@mail.mbevent.eu",
+      to: ["mariia.babenkova@gmail.com"],
       subject: `New message from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -21,6 +22,8 @@ export default async function handler(req, res) {
         <p><strong>Message:</strong> ${message}</p>
       `,
     });
+
+    console.log(data);
 
     res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
