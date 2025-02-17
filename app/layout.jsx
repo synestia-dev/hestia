@@ -19,8 +19,11 @@ const doppelganger = localFont({
 });
 
 export const metadata = {
-  title: "Hestia Events",
-  description: "Hestia Events Landing Page",
+  title: "Maria Events | Event agency",
+  description: "Maria Events is a boutique event agency that specializes in creating unforgettable experiences for businesses and individuals alike.",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }) {

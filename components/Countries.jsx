@@ -10,28 +10,24 @@ const events = [
     {
         id: 0,
         country: 'Spain',
-        name: 'Event name',
         description: 'Organized a dynamic medical device conference in Barcelona, bringing together over 100 experts (in-person and online) to discuss biocompatibility and its role in healthcare innovation.',
         tags: ['Medical Devices']
     },
     {
         id: 1,
         country: 'Czechia',
-        name: 'Event name',
         description: 'Successfully delivered a conference on respiratory drug delivery for the medical device industry. Hosted a tailored partner gathering for an international litigation finance company, connecting over 60 professionals from across Europe.',
         tags: ['Medical Devices', 'Legal', 'Finance','Networking']
     },
     {
         id: 2,
         country: 'Germany',
-        name: 'Event name',
         description: 'Led an engaging cross-industry digital transformation conference, creating opportunities for meaningful discussions on innovation and future technologies.',
         tags: ['Digital Transformation', 'Tech', 'Business Growth']
     },
     {
         id: 3,
         country: 'Italy',
-        name: 'Event name',
         description: 'Directed a forward-thinking event focused on innovations in cleaning products, highlighting industry trends and sustainable practices.',
         tags: ['Cleaning Products', 'Sustainability',]
     },
@@ -141,9 +137,6 @@ export default function Countries() {
                                     <h3 className='text-2xl font-playfairDisplay text-dun'>
                                         {event.country}
                                     </h3>
-                                    <h4 className='font-playfairDisplay text-xl mt-2 mb-4'>
-                                        {event.name}
-                                    </h4>
                                     <div className='text-sm font-light mb-4'>
                                         {event.description}
                                     </div>
@@ -205,7 +198,7 @@ export default function Countries() {
                     </h2>
                     <div className='hidden lg:block mt-8 lg:mt-20 border-b border-dun'>
                         <h3 className='text-3xl sm:text-4xl lg:text-5xl font-playfairDisplay mt-4 text-dun'>
-                            {events[activeCountry].country} - {events[activeCountry].name}
+                            {events[activeCountry].country}
                         </h3>
                         <p className='text-base font-poppins font-light mt-8 mb-8'>
                             {events[activeCountry].description}
@@ -220,6 +213,35 @@ export default function Countries() {
                                 </span>
                             ))}
                         </div>
+                    </div>
+                    {/* Add desktop navigation */}
+                    <div className='hidden lg:flex justify-between items-center mt-6'>
+                        <button
+                            onClick={() => handleSlideChange('prev')}
+                            className='p-2 rounded-full hover:bg-gray-100'
+                            aria-label='Previous slide'
+                        >
+                            <ChevronLeft className='w-6 h-6 text-dun' />
+                        </button>
+
+                        <div className='flex justify-center items-center gap-2'>
+                            {events.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setActiveCountry(index)}
+                                    className={`w-2 h-2 rounded-full transition-colors ${activeCountry === index ? 'bg-[#D6B981]' : 'bg-dun'}`}
+                                    aria-label={`Go to slide ${index + 1}`}
+                                />
+                            ))}
+                        </div>
+
+                        <button
+                            onClick={() => handleSlideChange('next')}
+                            className='p-2 rounded-full hover:bg-gray-100'
+                            aria-label='Next slide'
+                        >
+                            <ChevronRight className='w-6 h-6 text-dun' />
+                        </button>
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ export default function Footer() {
           </Link>
           <div className="flex items-center gap-4 mt-4">
             <Link
-              href="/"
+              href="https://t.me/maria_babenkova"
               target="_blank"
               className="flex items-center justify-center gap-2 size-10 bg-dun rounded-full text-white"
             >
@@ -31,7 +31,7 @@ export default function Footer() {
               </svg>
             </Link>
             <Link
-              href="/"
+              href="https://wa.me/420608688385"
               target="_blank"
               className="flex items-center justify-center gap-2 size-10 bg-dun rounded-full text-white"
             >
@@ -47,6 +47,23 @@ export default function Footer() {
                 />
               </svg>
             </Link>
+            <Link
+              href="https://www.linkedin.com/in/mariababenkova"
+              target="_blank"
+              className="flex items-center justify-center gap-2 size-10 bg-dun rounded-full text-white"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-10 sm:gap-[100px] lg:gap-[300px]">
@@ -57,17 +74,23 @@ export default function Footer() {
             >
               About me
             </a>
-            <a
+            {/* <a
               href="/#slogan"
               className="py-2 font-poppins text-base font-light relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-dun after:transition-all after:duration-300 hover:text-dun hover:after:w-full transition-all duration-300"
             >
               My Slogan
-            </a>
+            </a> */}
             <a
               href="/#experience"
               className="py-2 font-poppins text-base font-light relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-dun after:transition-all after:duration-300 hover:text-dun hover:after:w-full transition-all duration-300"
             >
               My Experience
+            </a>
+            <a
+              href="/#howcanihelp"
+              className="py-2 font-poppins text-base font-light relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-dun after:transition-all after:duration-300 hover:text-dun hover:after:w-full transition-all duration-300"
+            >
+              How can I help
             </a>
             <a
               href="/#faq"
@@ -91,18 +114,18 @@ export default function Footer() {
               Email: info@gmail.com
             </a>
             <a
-              href="tel:555-567-8901"
+              href="tel:+420608688385"
               className="py-2 font-poppins text-base font-light relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-dun after:transition-all after:duration-300 hover:text-dun hover:after:w-full transition-all duration-300"
             >
-              Phone: 555-567-8901
+              Phone: +420 608 688 385
             </a>
-            <a
+            {/* <a
               href="http://maps.google.com/?q=1234 Main St Moonstone City"
               target="_blank"
               className="py-2 font-poppins text-base font-light relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-dun after:transition-all after:duration-300 hover:text-dun hover:after:w-full transition-all duration-300"
             >
               Address: 1234 Main St Moonstone City
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
