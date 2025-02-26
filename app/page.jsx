@@ -6,6 +6,7 @@ import hero from "@/images/hero.webp";
 import event1 from "@/images/event1.avif";
 import event2 from "@/images/event2.avif";
 import event3 from "@/images/event3.avif";
+
 import contact from "@/images/contact.jpg";
 
 import Countries from "@/components/Countries";
