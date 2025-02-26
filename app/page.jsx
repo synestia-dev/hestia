@@ -10,7 +10,6 @@ import contact from "@/images/contact.jpg";
 
 import Countries from "@/components/Countries";
 import FAQ from "@/components/FAQ";
-import Button from "@/components/Button";
 import Reviews from "@/components/Reviews";
 import Form from "@/components/Form";
 import Loader from "@/components/Loader";
