@@ -24,7 +24,7 @@ export default function Home() {
           <div className="relative w-full max-w-[464px] mx-auto aspect-[464/632] lg:w-[464px] lg:h-[632px] rounded-t-full bg-[#F7F2EE] after:absolute after:inset-0 after:border after:border-[#D6B981] after:rounded-t-full after:scale-[1.05]">
             <Image
               src={hero}
-              alt="Hero image"
+              alt="Organization of business conferences in Prague"
               className="w-full h-full object-cover object-bottom rounded-t-full"
             />
           </div>
@@ -32,22 +32,28 @@ export default function Home() {
             <h1 className="flex justify-center lg:justify-start">
               <Image
                 src="./name.svg"
-                alt="Maria Babenkova"
+                alt="Organization of business conferences in Prague"
                 width={334}
                 height={72}
               />
             </h1>
             <p className="text-base font-poppins font-light mt-12 text-center lg:text-left">
-              Welcome! I'm Maria, an event planner with a passion for helping
-              businesses host remarkable events.
+              Hi, I'm Maria—a firm believer in the power of bringing people
+              together.
             </p>
             <p className="text-base font-poppins font-light mt-8 text-center lg:text-left">
-              My approach is simple: listen, create, and deliver events that are
-              perfectly tailored to your goals and vision. Whether it's a
-              high-level corporate gathering, a networking summit, or an
-              industry-defining conference, I'm here to make the process
-              seamless and enjoyable. From the initial idea to the final detail,
-              I'll ensure everything is taken care of.
+              Event planning found me naturally, blending my background in
+              international business with my passion for organization and
+              connection. Over the years, I've planned and moderated conferences
+              and corporate events across Europe in industries like pharma,
+              finance, and digital transformation. My goal? To create seamless
+              events that spark meaningful conversations and leave a lasting
+              impact.
+            </p>
+            <p className="text-base font-poppins font-light mt-8 text-center lg:text-left">
+              What drives me is that perfect moment when ideas take shape and
+              opportunities unfold. I listen, create, and deliver—so my clients
+              can focus on what truly matters.
             </p>
             <div className="text-center lg:text-left">
               <Link
@@ -201,8 +207,9 @@ export default function Home() {
                   </h3>
                   <div className="flex items-center h-auto flex-col gap-4">
                     <p className="text-sm lg:text-base font-poppins text-center font-light">
-                      I take care of everything - from the first idea to a
-                      flawless event day.
+                      I take care of all aspects – from the first idea to the
+                      flawless execution of the event, including selection of
+                      venues, speaker coordination and on-site management.
                     </p>
                     <p className="text-sm lg:text-base font-poppins text-center font-light">
                       Venue sourcing, speaker coordination, on-site execution
@@ -309,7 +316,7 @@ export default function Home() {
           <div className="relative w-full max-w-[500px] aspect-square lg:size-[500px] bg-foreground rounded-tr-[50%] after:absolute after:inset-0 after:border after:border-[#D6B981] after:rounded-tr-[50%] after:scale-[1.05]">
             <Image
               src={contact}
-              alt="Contact"
+              alt="Organization of business conferences in Prague"
               className="w-full h-full rounded-tr-[50%] object-cover"
             />
           </div>
