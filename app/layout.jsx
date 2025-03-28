@@ -19,17 +19,22 @@ const doppelganger = localFont({
 });
 
 export const metadata = {
-  title: "Maria Events | Event agency",
-  description: "Maria Events is a boutique event agency that specializes in creating unforgettable experiences for businesses and individuals alike.",
+  title: "Organization of business conferences in Prague - Maria Events",
+  description:
+    "Maria Events offers professional services for organizing business conferences and corporate events in Prague. Individual approach, extensive experience and attention to detail for the successful implementation of your event.",
+  keywords:
+    "organization of business conferences in Prague, corporate events Prague, event agency services in Prague, Maria Events",
   icons: {
-    icon: '/favicon.svg',
+    icon: "/favicon.svg",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${playfairDisplay.variable} ${poppins.variable} ${doppelganger.variable} antialiased`}>
+      <body
+        className={`${playfairDisplay.variable} ${poppins.variable} ${doppelganger.variable} antialiased`}
+      >
         <Header />
         {children}
         <Footer />
